@@ -1898,7 +1898,7 @@
 										"$ref": "AAAAAAFyDuJZzoyVMCg="
 									},
 									"edgePosition": 1,
-									"text": "+ثبت می کند"
+									"text": "ثبت می کند"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2114,7 +2114,6 @@
 							},
 							"lineStyle": 1,
 							"points": "199:569;347:991",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDuJZzoyWO4s="
 							},
@@ -2179,7 +2178,7 @@
 										"$ref": "AAAAAAFyDuLl1Y4cjYA="
 									},
 									"edgePosition": 1,
-									"text": "+ثبت شده است در"
+									"text": "ثبت شده است در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2395,7 +2394,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1577:561;1758:743",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDuLl1Y4dOic="
 							},
@@ -2460,7 +2458,7 @@
 										"$ref": "AAAAAAFyDuMEJ5ADMro="
 									},
 									"edgePosition": 1,
-									"text": "+بررسی می شود توسط"
+									"text": "بررسی می شود توسط"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2676,7 +2674,6 @@
 							},
 							"lineStyle": 1,
 							"points": "2113:724;2295:724",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDuMEJ5AEGxQ="
 							},
@@ -2741,7 +2738,7 @@
 										"$ref": "AAAAAAFyDuMeaJJ3r0Y="
 									},
 									"edgePosition": 1,
-									"text": "+ثبت شده است در"
+									"text": "ثبت شده است در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2957,7 +2954,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1585:533;1983:697",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDuMeaJJ4kHY="
 							},
@@ -3208,8 +3204,8 @@
 									"visible": false,
 									"fillColor": "#ebd8ff",
 									"font": "Arial;13;0",
-									"left": 616,
-									"top": -200,
+									"left": 592,
+									"top": -344,
 									"width": 10,
 									"height": 10
 								},
@@ -3225,8 +3221,8 @@
 									"visible": false,
 									"fillColor": "#ebd8ff",
 									"font": "Arial;13;0",
-									"left": 616,
-									"top": -200,
+									"left": 592,
+									"top": -344,
 									"width": 10,
 									"height": 10
 								}
@@ -3284,7 +3280,7 @@
 										"$ref": "AAAAAAFyDw+Upr1XFNk="
 									},
 									"edgePosition": 1,
-									"text": "+است"
+									"text": "است"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3339,7 +3335,6 @@
 							},
 							"lineStyle": 1,
 							"points": "241:489;544:352;759:354",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDw+Upr1YwzY="
 							},
@@ -3380,7 +3375,7 @@
 										"$ref": "AAAAAAFyDxU2sMW+OK0="
 									},
 									"edgePosition": 1,
-									"text": "+است"
+									"text": "است"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3434,7 +3429,6 @@
 								"$ref": "AAAAAAFyDtj5p4rk7+g="
 							},
 							"points": "1844:448;1844:352;879:352",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDxU2sMW/kHA="
 							},
@@ -3475,7 +3469,7 @@
 										"$ref": "AAAAAAFyDxaHbcrlItI="
 									},
 									"edgePosition": 1,
-									"text": "+است"
+									"text": "است"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3529,7 +3523,6 @@
 								"$ref": "AAAAAAFyDtqtj4tw9mM="
 							},
 							"points": "2340:672;2340:337;879:337",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDxaHbcrmDdk="
 							},
@@ -3756,7 +3749,7 @@
 										"$ref": "AAAAAAFyDxyocvOeRn8="
 									},
 									"edgePosition": 1,
-									"text": "+دارای"
+									"text": "دارای"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3971,7 +3964,6 @@
 								"$ref": "AAAAAAFyDtgavYpfwZ4="
 							},
 							"points": "184:568;184:1296;776:1296",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyDxyocvOfBmk="
 							},
@@ -4222,7 +4214,7 @@
 										"$ref": "AAAAAAFyD0VoIkilHzM="
 									},
 									"edgePosition": 1,
-									"text": "+استفاده می شود توسط"
+									"text": "استفاده می شود توسط"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4437,7 +4429,6 @@
 								"$ref": "AAAAAAFyDtgavYpfwZ4="
 							},
 							"points": "120:516;48:516;48:1468;1232:1468",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD0VoIkimH8o="
 							},
@@ -4502,7 +4493,7 @@
 										"$ref": "AAAAAAFyD1HOK5i9+jE="
 									},
 									"edgePosition": 1,
-									"text": "+درخواست می کند"
+									"text": "درخواست می کند"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4718,7 +4709,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1585:508;1791:507",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD1HOK5i+C0o="
 							},
@@ -4989,7 +4979,7 @@
 										"$ref": "AAAAAAFyD2ugKrim9lM="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -5205,7 +5195,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1161:508;1463:508",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD2ugK7inRyM="
 							},
@@ -5557,7 +5546,7 @@
 										"$ref": "AAAAAAFyD3fb0t+ZCLA="
 									},
 									"edgePosition": 2,
-									"text": "+انجام می شود در"
+									"text": "انجام می شود در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -5710,7 +5699,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1508:561;1408:903",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD3fb0t+aW2g="
 							},
@@ -5775,7 +5763,7 @@
 										"$ref": "AAAAAAFyD3gYj+ZctY8="
 									},
 									"edgePosition": 1,
-									"text": "+انجام می دهد"
+									"text": "انجام می دهد"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -5997,7 +5985,6 @@
 							"lineStyle": 1,
 							"points": "241:515;1039:509",
 							"stereotypeDisplay": "decoration",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD3gYj+ZdBfM="
 							},
@@ -6062,7 +6049,7 @@
 										"$ref": "AAAAAAFyD4BfYhU1yZc="
 									},
 									"edgePosition": 1,
-									"text": "+می گیرد"
+									"text": "می گیرد"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -6278,7 +6265,6 @@
 							},
 							"lineStyle": 1,
 							"points": "232:569;388:727",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD4BfYhU2GfU="
 							},
@@ -6343,7 +6329,7 @@
 										"$ref": "AAAAAAFyD4FI4yeHn2s="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -6559,7 +6545,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1111:561;1283:1423",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD4FI5CeIqwA="
 							},
@@ -6886,7 +6871,7 @@
 										"$ref": "AAAAAAFyD4P3CS2JCPg="
 									},
 									"edgePosition": 1,
-									"text": "+انجام می شود در"
+									"text": "انجام می شود در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7102,7 +7087,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1555:561;1825:1023",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD4P3Ci2K/3c="
 							},
@@ -7167,7 +7151,7 @@
 										"$ref": "AAAAAAFyD4QeETCOs5A="
 									},
 									"edgePosition": 1,
-									"text": "+آماده می شود در"
+									"text": "آماده می شود در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7383,7 +7367,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1353:1426;1791:1121",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyD4QeETCPTfY="
 							},
@@ -7871,7 +7854,7 @@
 										"$ref": "AAAAAAFyFB8miFJx8/c="
 									},
 									"edgePosition": 1,
-									"text": "+حضور می یابد در"
+									"text": "حضور می یابد در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8085,7 +8068,6 @@
 							},
 							"lineStyle": 1,
 							"points": "241:538;1327:932",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFB8miFJy0SA="
 							},
@@ -8150,7 +8132,7 @@
 										"$ref": "AAAAAAFyFGXLzmI2QqE="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8364,7 +8346,6 @@
 							},
 							"lineStyle": 1,
 							"points": "425:996;1039:552",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFGXLzmI3aGI="
 							},
@@ -8654,7 +8635,7 @@
 										"$ref": "AAAAAAFyFInaUMSkytU="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8863,7 +8844,6 @@
 							},
 							"lineStyle": 1,
 							"points": "682:991;1054:561",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFInaUMSlijA="
 							},
@@ -8928,7 +8908,7 @@
 										"$ref": "AAAAAAFyFJDpJjHmD5o="
 									},
 									"edgePosition": 1,
-									"text": "+انجام می شود در"
+									"text": "انجام می شود در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -9137,7 +9117,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1152:561;1244:655",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFJDpJjHnR4M="
 							},
@@ -9202,7 +9181,7 @@
 										"$ref": "AAAAAAFyFJIaBW7S3dA="
 									},
 									"edgePosition": 1,
-									"text": "+است"
+									"text": "است"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -9256,7 +9235,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1791:1033;1361:751",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFJIaBW7Ty2Q="
 							},
@@ -9297,7 +9275,7 @@
 										"$ref": "AAAAAAFyFJcb9tpdKUg="
 									},
 									"edgePosition": 1,
-									"text": "+پذیرش می شود در"
+									"text": "پذیرش می شود در"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -9506,7 +9484,6 @@
 							},
 							"lineStyle": 1,
 							"points": "705:1042;1791:1074",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFJcb9tpebqc="
 							},
@@ -9571,7 +9548,7 @@
 										"$ref": "AAAAAAFyFLeu0PMr6yI="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -9780,7 +9757,6 @@
 							},
 							"lineStyle": 1,
 							"points": "705:1054;1351:1191",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFLeu0PMsQoE="
 							},
@@ -9845,7 +9821,7 @@
 										"$ref": "AAAAAAFyFMIDUt31Aec="
 									},
 									"edgePosition": 1,
-									"text": "+متعلق است به"
+									"text": "متعلق است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10054,7 +10030,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1445:1151;1813:568",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyFMIDUt32c9Q="
 							},
@@ -10483,7 +10458,7 @@
 											"top": 622,
 											"width": 103,
 											"height": 13,
-											"text": "+نوع آزمایش",
+											"text": "+نام آزمایش",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10634,7 +10609,7 @@
 										"$ref": "AAAAAAFyLj9dTvJ1/kk="
 									},
 									"edgePosition": 1,
-									"text": "+شامل"
+									"text": "شامل"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10843,7 +10818,6 @@
 							},
 							"lineStyle": 1,
 							"points": "1039:532;817:621",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyLj9dTvJ2YeQ="
 							},
@@ -10908,7 +10882,7 @@
 										"$ref": "AAAAAAFyLkBzFS193T4="
 									},
 									"edgePosition": 1,
-									"text": "+مربوط است به"
+									"text": "مربوط است به"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -11117,7 +11091,6 @@
 							},
 							"lineStyle": 1,
 							"points": "703:668;497:756",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyLkBzFS1+Qgw="
 							},
@@ -11182,7 +11155,7 @@
 										"$ref": "AAAAAAFyW0fqtSGb5zg="
 									},
 									"edgePosition": 1,
-									"text": "+شامل"
+									"text": "شامل"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -11340,9 +11313,9 @@
 										"$ref": "AAAAAAFyW0fqtCGZ3SM="
 									},
 									"font": "Arial;13;0",
-									"left": 1084,
+									"left": 1083,
 									"top": 579,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -11391,7 +11364,6 @@
 							},
 							"lineStyle": 1,
 							"points": "852:1247;1082:561",
-							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFyW0fqtSGc6S0="
 							},
@@ -11646,44 +11618,45 @@
 							}
 						},
 						{
-							"_type": "UMLAssociationView",
-							"_id": "AAAAAAFyW1A2bZ/+nlM=",
+							"_type": "UMLGeneralizationView",
+							"_id": "AAAAAAFyYDxbUJjOGLE=",
 							"_parent": {
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"model": {
-								"$ref": "AAAAAAFyW1A2bZ/6iWY="
+								"$ref": "AAAAAAFyYDxbT5jMcds="
 							},
 							"subViews": [
 								{
 									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bZ//kVQ=",
+									"_id": "AAAAAAFyYDxbUJjPB+g=",
 									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
 									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/6iWY="
+										"$ref": "AAAAAAFyYDxbT5jMcds="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 804,
+									"left": 791,
 									"top": 244,
+									"width": 26.45703125,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
 									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
-									"edgePosition": 1
+									"edgePosition": 1,
+									"text": "است"
 								},
 								{
 									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAALuE=",
+									"_id": "AAAAAAFyYDxbUJjQg5A=",
 									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
 									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/6iWY="
+										"$ref": "AAAAAAFyYDxbT5jMcds="
 									},
 									"visible": null,
 									"font": "Arial;13;0",
@@ -11693,18 +11666,18 @@
 									"alpha": 1.5707963267948966,
 									"distance": 30,
 									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
 									"edgePosition": 1
 								},
 								{
 									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqABagA=",
+									"_id": "AAAAAAFyYDxbUJjRYeM=",
 									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
 									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/6iWY="
+										"$ref": "AAAAAAFyYDxbT5jMcds="
 									},
 									"visible": false,
 									"font": "Arial;13;0",
@@ -11714,162 +11687,9 @@
 									"alpha": -1.5707963267948966,
 									"distance": 15,
 									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
+										"$ref": "AAAAAAFyYDxbUJjOGLE="
 									},
 									"edgePosition": 1
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqACKgM=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/7r2Y="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 804,
-									"top": 271,
-									"height": 13,
-									"alpha": 0.5235987755982988,
-									"distance": 30,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"edgePosition": 2
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAD/ZE=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/7r2Y="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 790,
-									"top": 268,
-									"height": 13,
-									"alpha": 0.7853981633974483,
-									"distance": 40,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"edgePosition": 2
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAEdyM=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/7r2Y="
-									},
-									"font": "Arial;13;0",
-									"left": 828,
-									"top": 275,
-									"width": 7.22998046875,
-									"height": 13,
-									"alpha": -0.5235987755982988,
-									"distance": 25,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"edgePosition": 2,
-									"text": "1"
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAFEo8=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/82mE="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 804,
-									"top": 219,
-									"height": 13,
-									"alpha": -0.5235987755982988,
-									"distance": 30,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									}
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAGESM=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/82mE="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 790,
-									"top": 222,
-									"height": 13,
-									"alpha": -0.7853981633974483,
-									"distance": 40,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									}
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAFyW1A2bqAHbvk=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/82mE="
-									},
-									"font": "Arial;13;0",
-									"left": 828,
-									"top": 215,
-									"width": 7.22998046875,
-									"height": 13,
-									"alpha": 0.5235987755982988,
-									"distance": 25,
-									"hostEdge": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"text": "1"
-								},
-								{
-									"_type": "UMLQualifierCompartmentView",
-									"_id": "AAAAAAFyW1A2bqAIV/k=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/7r2Y="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"width": 10,
-									"height": 10
-								},
-								{
-									"_type": "UMLQualifierCompartmentView",
-									"_id": "AAAAAAFyW1A2bqAJd0I=",
-									"_parent": {
-										"$ref": "AAAAAAFyW1A2bZ/+nlM="
-									},
-									"model": {
-										"$ref": "AAAAAAFyW1A2bZ/82mE="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"width": 10,
-									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
@@ -11881,39 +11701,14 @@
 							},
 							"lineStyle": 1,
 							"points": "819:303;819:200",
-							"showVisibility": true,
 							"nameLabel": {
-								"$ref": "AAAAAAFyW1A2bZ//kVQ="
+								"$ref": "AAAAAAFyYDxbUJjPB+g="
 							},
 							"stereotypeLabel": {
-								"$ref": "AAAAAAFyW1A2bqAALuE="
+								"$ref": "AAAAAAFyYDxbUJjQg5A="
 							},
 							"propertyLabel": {
-								"$ref": "AAAAAAFyW1A2bqABagA="
-							},
-							"tailRoleNameLabel": {
-								"$ref": "AAAAAAFyW1A2bqACKgM="
-							},
-							"tailPropertyLabel": {
-								"$ref": "AAAAAAFyW1A2bqAD/ZE="
-							},
-							"tailMultiplicityLabel": {
-								"$ref": "AAAAAAFyW1A2bqAEdyM="
-							},
-							"headRoleNameLabel": {
-								"$ref": "AAAAAAFyW1A2bqAFEo8="
-							},
-							"headPropertyLabel": {
-								"$ref": "AAAAAAFyW1A2bqAGESM="
-							},
-							"headMultiplicityLabel": {
-								"$ref": "AAAAAAFyW1A2bqAHbvk="
-							},
-							"tailQualifiersCompartment": {
-								"$ref": "AAAAAAFyW1A2bqAIV/k="
-							},
-							"headQualifiersCompartment": {
-								"$ref": "AAAAAAFyW1A2bqAJd0I="
+								"$ref": "AAAAAAFyYDxbUJjRYeM="
 							}
 						}
 					]
@@ -12982,6 +12777,20 @@
 								},
 								"multiplicity": "1"
 							}
+						},
+						{
+							"_type": "UMLGeneralization",
+							"_id": "AAAAAAFyYDxbT5jMcds=",
+							"_parent": {
+								"$ref": "AAAAAAFyDwwYga/CLlg="
+							},
+							"name": "است",
+							"source": {
+								"$ref": "AAAAAAFyDwwYga/CLlg="
+							},
+							"target": {
+								"$ref": "AAAAAAFyW0/xnptpAAI="
+							}
 						}
 					],
 					"attributes": [
@@ -13743,8 +13552,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFyLj5JRtO0JLg="
 							},
-							"name": "نوع آزمایش",
-							"type": ""
+							"name": "نام آزمایش"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -13761,7 +13569,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFyLj5JRtO0JLg="
 							},
-							"name": "ID"
+							"name": "ID",
+							"type": ""
 						}
 					]
 				},
