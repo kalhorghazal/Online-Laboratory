@@ -2209,6 +2209,20 @@
 									"activation": {
 										"$ref": "AAAAAAFynvt3RHJarqk="
 									}
+								},
+								{
+									"_type": "UMLTextView",
+									"_id": "AAAAAAFzL72QwrSp10c=",
+									"_parent": {
+										"$ref": "AAAAAAFynu0H6m+TTCo="
+									},
+									"fontColor": "#a22a2a",
+									"font": "Arial;13;0",
+									"left": 96,
+									"top": 8,
+									"width": 233,
+									"height": 25,
+									"text": "sendAddress Sequence Diagram"
 								}
 							],
 							"showSequenceNumber": false
