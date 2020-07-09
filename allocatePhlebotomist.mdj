@@ -85,7 +85,7 @@
 															"top": 87,
 															"width": 86.48681640625,
 															"height": 13,
-															"text": ": بیمار"
+															"text": ": Patient"
 														},
 														{
 															"_type": "LabelView",
@@ -1399,6 +1399,20 @@
 											"activation": {
 												"$ref": "AAAAAAFytEvyGLs8Rcs="
 											}
+										},
+										{
+											"_type": "UMLTextView",
+											"_id": "AAAAAAFzMkBwhr0T4Wg=",
+											"_parent": {
+												"$ref": "AAAAAAFyqnWahLckZM8="
+											},
+											"fontColor": "#ff7f00",
+											"font": "Arial;13;0",
+											"left": 128,
+											"top": 8,
+											"width": 265,
+											"height": 25,
+											"text": "allocatePhlebotomist Sequence Diagram"
 										}
 									],
 									"showSequenceNumber": false
@@ -1616,7 +1630,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFyqnWag7ciSO0="
 							},
-							"name": "Role5"
+							"name": "Role5",
+							"type": ""
 						}
 					]
 				},
@@ -1634,7 +1649,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				}
 			]
 		}
