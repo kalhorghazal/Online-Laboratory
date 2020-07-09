@@ -26,7 +26,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				}
 			]
 		},
@@ -96,7 +96,7 @@
 													"top": 87,
 													"width": 86.48681640625,
 													"height": 13,
-													"text": ": بیمار"
+													"text": ": Patient"
 												},
 												{
 													"_type": "LabelView",
@@ -1860,6 +1860,20 @@
 									"activation": {
 										"$ref": "AAAAAAFynrWLPkwLvbQ="
 									}
+								},
+								{
+									"_type": "UMLTextView",
+									"_id": "AAAAAAFzMke0w9UXP8w=",
+									"_parent": {
+										"$ref": "AAAAAAFyno278/vr9Sw="
+									},
+									"fontColor": "#59b200",
+									"font": "Arial;13;0",
+									"left": 104,
+									"top": 8,
+									"width": 209,
+									"height": 25,
+									"text": "getLabList Sequence Diagram"
 								}
 							],
 							"showSequenceNumber": false
