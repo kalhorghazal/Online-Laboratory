@@ -85,7 +85,7 @@
 															"top": 87,
 															"width": 86.48681640625,
 															"height": 13,
-															"text": ": بیمار"
+															"text": ": Patient"
 														},
 														{
 															"_type": "LabelView",
@@ -1736,6 +1736,20 @@
 											"activation": {
 												"$ref": "AAAAAAFynYMbF3VI7y8="
 											}
+										},
+										{
+											"_type": "UMLTextView",
+											"_id": "AAAAAAFzMjHfOsaq19M=",
+											"_parent": {
+												"$ref": "AAAAAAFynXQdcXO00+M="
+											},
+											"fontColor": "#ff82c0",
+											"font": "Arial;13;0",
+											"left": 160,
+											"top": 8,
+											"width": 233,
+											"height": 25,
+											"text": "getTestNames Sequence Diagram"
 										}
 									],
 									"showSequenceNumber": false
@@ -1962,7 +1976,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynXQdcHOyPQ4="
 							},
-							"name": "Role2"
+							"name": "Role2",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1970,7 +1985,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynXQdcHOyPQ4="
 							},
-							"name": "Role3"
+							"name": "Role3",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1978,7 +1994,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynXQdcHOyPQ4="
 							},
-							"name": "Role4"
+							"name": "Role4",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1986,7 +2003,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynXQdcHOyPQ4="
 							},
-							"name": "Role5"
+							"name": "Role5",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1994,7 +2012,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynXQdcHOyPQ4="
 							},
-							"name": "Role6"
+							"name": "Role6",
+							"type": ""
 						}
 					]
 				},
@@ -2004,7 +2023,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				}
 			]
 		}
