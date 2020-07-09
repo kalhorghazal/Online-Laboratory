@@ -86,7 +86,7 @@
 															"top": 87,
 															"width": 112.07421875,
 															"height": 13,
-															"text": ": نسخه خوان"
+															"text": ": Phlebotomist"
 														},
 														{
 															"_type": "LabelView",
@@ -2025,7 +2025,7 @@
 															"top": 87,
 															"width": 86.48681640625,
 															"height": 13,
-															"text": ": بیمار"
+															"text": ": Patient"
 														},
 														{
 															"_type": "LabelView",
@@ -2826,7 +2826,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "نسخه خوان"
+					"name": "Phlebotomist"
 				},
 				{
 					"_type": "UMLActor",
@@ -2834,7 +2834,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				}
 			]
 		}
