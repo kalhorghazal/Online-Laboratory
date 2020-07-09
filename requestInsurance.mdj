@@ -26,7 +26,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				},
 				{
 					"_type": "UMLActor",
@@ -34,7 +34,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمه API"
+					"name": "InsuranceAPI"
 				}
 			]
 		},
@@ -104,7 +104,7 @@
 													"top": 87,
 													"width": 86.48681640625,
 													"height": 13,
-													"text": ": بیمار"
+													"text": ": Patient"
 												},
 												{
 													"_type": "LabelView",
@@ -1693,7 +1693,7 @@
 													"top": 87,
 													"width": 109.4208984375,
 													"height": 13,
-													"text": ": بیمه API"
+													"text": ": InsuranceAPI"
 												},
 												{
 													"_type": "LabelView",
@@ -1766,117 +1766,6 @@
 									},
 									"linePart": {
 										"$ref": "AAAAAAFym0Y6MT4l7m4="
-									}
-								},
-								{
-									"_type": "UMLSeqMessageView",
-									"_id": "AAAAAAFym0gcZz5Ys3Q=",
-									"_parent": {
-										"$ref": "AAAAAAFymywKk2bwxTw="
-									},
-									"model": {
-										"$ref": "AAAAAAFym0gcZj5Xf38="
-									},
-									"subViews": [
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAFym0gcZz5ZfeI=",
-											"_parent": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"model": {
-												"$ref": "AAAAAAFym0gcZj5Xf38="
-											},
-											"font": "Arial;13;0",
-											"left": 1071,
-											"top": 363,
-											"width": 110.55712890625,
-											"height": 13,
-											"alpha": 1.5850800673418937,
-											"distance": 70.00714249274856,
-											"hostEdge": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"edgePosition": 1,
-											"text": "validateInsurance()"
-										},
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAFym0gcZz5aLqc=",
-											"_parent": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"model": {
-												"$ref": "AAAAAAFym0gcZj5Xf38="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": 1080,
-											"top": 363,
-											"height": 13,
-											"alpha": 1.5707963267948966,
-											"distance": 25,
-											"hostEdge": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"edgePosition": 1
-										},
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAFym0gcZz5bUt8=",
-											"_parent": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"model": {
-												"$ref": "AAAAAAFym0gcZj5Xf38="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": 1046,
-											"top": 364,
-											"height": 13,
-											"alpha": -1.5707963267948966,
-											"distance": 10,
-											"hostEdge": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"edgePosition": 1
-										},
-										{
-											"_type": "UMLActivationView",
-											"_id": "AAAAAAFym0gcZz5cNNw=",
-											"_parent": {
-												"$ref": "AAAAAAFym0gcZz5Ys3Q="
-											},
-											"model": {
-												"$ref": "AAAAAAFym0gcZj5Xf38="
-											},
-											"font": "Arial;13;0",
-											"left": 1020,
-											"top": 380,
-											"width": 14,
-											"height": 29
-										}
-									],
-									"font": "Arial;13;0",
-									"head": {
-										"$ref": "AAAAAAFym0Y6MT4l7m4="
-									},
-									"tail": {
-										"$ref": "AAAAAAFym0Y6MT4l7m4="
-									},
-									"points": "1026:360;1056:360;1056:380;1033:380",
-									"nameLabel": {
-										"$ref": "AAAAAAFym0gcZz5ZfeI="
-									},
-									"stereotypeLabel": {
-										"$ref": "AAAAAAFym0gcZz5aLqc="
-									},
-									"propertyLabel": {
-										"$ref": "AAAAAAFym0gcZz5bUt8="
-									},
-									"activation": {
-										"$ref": "AAAAAAFym0gcZz5cNNw="
 									}
 								},
 								{
@@ -2798,20 +2687,6 @@
 						},
 						{
 							"_type": "UMLMessage",
-							"_id": "AAAAAAFym0gcZj5Xf38=",
-							"_parent": {
-								"$ref": "AAAAAAFymywKk2bvw/w="
-							},
-							"name": "validateInsurance()",
-							"source": {
-								"$ref": "AAAAAAFym0Y6MD4etlA="
-							},
-							"target": {
-								"$ref": "AAAAAAFym0Y6MD4etlA="
-							}
-						},
-						{
-							"_type": "UMLMessage",
 							"_id": "AAAAAAFym0i0Rz5uwTk=",
 							"_parent": {
 								"$ref": "AAAAAAFymywKk2bvw/w="
@@ -3070,7 +2945,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFymywKkmbus7k="
 					},
-					"name": "Role8"
+					"name": "Role8",
+					"type": ""
 				}
 			]
 		}
