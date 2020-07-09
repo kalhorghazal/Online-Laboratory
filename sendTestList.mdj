@@ -86,7 +86,7 @@
 															"top": 87,
 															"width": 86.48681640625,
 															"height": 13,
-															"text": ": بیمار"
+															"text": ": Patient"
 														},
 														{
 															"_type": "LabelView",
@@ -1616,6 +1616,20 @@
 											"activation": {
 												"$ref": "AAAAAAFyncxvN6Tb16s="
 											}
+										},
+										{
+											"_type": "UMLTextView",
+											"_id": "AAAAAAFzMiK6O/BvAW0=",
+											"_parent": {
+												"$ref": "AAAAAAFynbTwl3UBoww="
+											},
+											"fontColor": "#4c0099",
+											"font": "Arial;13;0",
+											"left": 80,
+											"top": 8,
+											"width": 241,
+											"height": 25,
+											"text": "sendTestList Sequence Diagram"
 										}
 									],
 									"showSequenceNumber": false
@@ -1863,7 +1877,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynbTwlnT/7vA="
 							},
-							"name": "Role5"
+							"name": "Role5",
+							"type": ""
 						}
 					]
 				},
@@ -1873,7 +1888,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "بیمار"
+					"name": "Patient"
 				}
 			]
 		}
