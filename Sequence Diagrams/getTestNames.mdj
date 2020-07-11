@@ -201,9 +201,9 @@
 															"font": "Arial;13;1",
 															"left": 485,
 															"top": 47,
-															"width": 146.2841796875,
+															"width": 171.08447265625,
 															"height": 13,
-															"text": "RequestTestControl"
+															"text": "CheckPrescriptionControl"
 														},
 														{
 															"_type": "LabelView",
@@ -234,7 +234,7 @@
 													"font": "Arial;13;0",
 													"left": 480,
 													"top": 40,
-													"width": 156.2841796875,
+													"width": 181.08447265625,
 													"height": 40,
 													"stereotypeLabel": {
 														"$ref": "AAAAAAFynXcYGnQWb4k="
@@ -259,7 +259,7 @@
 														"$ref": "AAAAAAFynXcYGnQTSSk="
 													},
 													"font": "Arial;13;0",
-													"left": 558,
+													"left": 571,
 													"top": 80,
 													"width": 1,
 													"height": 289
@@ -268,7 +268,7 @@
 											"font": "Arial;13;0",
 											"left": 480,
 											"top": 40,
-											"width": 156.2841796875,
+											"width": 181.08447265625,
 											"height": 329,
 											"nameCompartment": {
 												"$ref": "AAAAAAFynXcYGnQV/DE="
@@ -413,7 +413,7 @@
 														"$ref": "AAAAAAFzNM5r0DdyamU="
 													},
 													"font": "Arial;13;0",
-													"left": 344,
+													"left": 351,
 													"top": 118,
 													"width": 195.076171875,
 													"height": 13,
@@ -436,7 +436,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 443,
+													"left": 450,
 													"top": 105,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -457,7 +457,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 443,
+													"left": 450,
 													"top": 140,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -477,7 +477,7 @@
 														"$ref": "AAAAAAFzNM5r0DdyamU="
 													},
 													"font": "Arial;13;0",
-													"left": 551,
+													"left": 564,
 													"top": 136,
 													"width": 14,
 													"height": 29
@@ -490,7 +490,7 @@
 											"tail": {
 												"$ref": "AAAAAAFynXWGanPW+gE="
 											},
-											"points": "336:136;551:136",
+											"points": "336:136;564:136",
 											"nameLabel": {
 												"$ref": "AAAAAAFzNM5r0Dd0s8Y="
 											},
@@ -640,7 +640,7 @@
 														"$ref": "AAAAAAFzN+73vKDFz+A="
 													},
 													"font": "Arial;13;0",
-													"left": 574,
+													"left": 580,
 													"top": 144,
 													"width": 259.01611328125,
 													"height": 13,
@@ -663,7 +663,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 703,
+													"left": 709,
 													"top": 129,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -684,7 +684,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 703,
+													"left": 709,
 													"top": 164,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -717,7 +717,7 @@
 											"tail": {
 												"$ref": "AAAAAAFynXcYGnQaBSk="
 											},
-											"points": "564:160;842:160",
+											"points": "577:160;842:160",
 											"nameLabel": {
 												"$ref": "AAAAAAFzN+73vKDHPek="
 											},
@@ -877,7 +877,7 @@
 														"$ref": "AAAAAAFzPNprC3mpZvc="
 													},
 													"font": "Arial;13;0",
-													"left": 592,
+													"left": 605,
 													"top": 291,
 													"width": 209.54248046875,
 													"height": 13,
@@ -900,7 +900,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 612,
+													"left": 625,
 													"top": 291,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -921,7 +921,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 578,
+													"left": 591,
 													"top": 292,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -941,7 +941,7 @@
 														"$ref": "AAAAAAFzPNprC3mpZvc="
 													},
 													"font": "Arial;13;0",
-													"left": 551,
+													"left": 564,
 													"top": 308,
 													"width": 14,
 													"height": 29
@@ -954,7 +954,7 @@
 											"tail": {
 												"$ref": "AAAAAAFynXcYGnQaBSk="
 											},
-											"points": "558:288;588:288;588:308;564:308",
+											"points": "571:288;601:288;601:308;577:308",
 											"nameLabel": {
 												"$ref": "AAAAAAFzPNprC3mrEKo="
 											},
@@ -1049,7 +1049,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFynXQdcXOz3B0="
 									},
-									"name": "RequestTestControl",
+									"name": "CheckPrescriptionControl",
 									"represent": {
 										"$ref": "AAAAAAFynXcYGnQSvYY="
 									},
