@@ -313,7 +313,7 @@
 														"$ref": "AAAAAAFzNL1BpykNJfk="
 													},
 													"edgePosition": 1,
-													"text": "sendTestList(TestNames)"
+													"text": "sendTestList(testNames)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -774,7 +774,7 @@
 														"$ref": "AAAAAAFzOG+CJ+KKogo="
 													},
 													"edgePosition": 1,
-													"text": "makeTest(TestName)"
+													"text": "makeTest(testName)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -978,13 +978,14 @@
 									"_parent": {
 										"$ref": "AAAAAAFynbTwlnUAb+k="
 									},
-									"name": "sendTestList(TestNames)",
+									"name": "sendTestList",
 									"source": {
 										"$ref": "AAAAAAFynbV4qXUaGHE="
 									},
 									"target": {
 										"$ref": "AAAAAAFynbhUIhGITtM="
-									}
+									},
+									"arguments": "testNames"
 								},
 								{
 									"_type": "UMLMessage",
@@ -999,7 +1000,7 @@
 									"target": {
 										"$ref": "AAAAAAFzOG5+v+JkmHc="
 									},
-									"arguments": "TestName"
+									"arguments": "testName"
 								},
 								{
 									"_type": "UMLMessage",
@@ -1141,7 +1142,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFynbTwlnT/7vA="
 							},
-							"name": "Role6"
+							"name": "Role6",
+							"type": ""
 						}
 					]
 				},
