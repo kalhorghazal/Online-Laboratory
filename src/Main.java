@@ -40,7 +40,7 @@ public class Main {
         return null;
     }
 
-    public static void init() {
+    private static void init() {
         phlebotomists = new ArrayList<>();
         laboratories = new ArrayList<>();
         users = new ArrayList<>();
@@ -127,7 +127,7 @@ public class Main {
         testPrices.put("Calcium", 6500f);
     }
 
-    public static boolean areTestNamesValid(ArrayList<String> testNames) {
+    private static boolean areTestNamesValid(ArrayList<String> testNames) {
         for (String testName : testNames) {
             if (!testPrices.containsKey(testName)) {
                 return false;
@@ -138,13 +138,15 @@ public class Main {
 
     public static void requestTest() {
         RequestTestControl requestTestControl = new RequestTestControl();
+        Scanner scanner = new Scanner(System.in);
 
         Patient patient = (Patient) users.get(0);
         requestTestControl.requestTest(patient.getFirstName(), patient.getLastName(),
                 patient.getAge(), patient.getNID(), patient.getDiseases());
 
+        System.out.println("You can quit in any step by entering quit or q\n------------------");
+
         System.out.println("Please enter test names separated by comma:");
-        Scanner scanner = new Scanner(System.in);
         ArrayList<String> testNames = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
         while (testNames.size() == 0) {
             System.out.println("Error, test names can not be empty!\n" +
@@ -160,9 +162,14 @@ public class Main {
 
         System.out.println("Please enter your insurance ID: (leave empty if none exists)");
         String insuranceID = scanner.nextLine();
+        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(insuranceID))
+            return;
+        String insuranceName = null;
         if (!insuranceID.equals("")) {
             System.out.println("Please enter your insurance name:");
-            String insuranceName = scanner.nextLine();
+            insuranceName = scanner.nextLine();
+            if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(insuranceName))
+                return;
             requestTestControl.requestInsurance(insuranceID, insuranceName);
         }
 
@@ -172,30 +179,52 @@ public class Main {
         }
         System.out.println("Please enter selected lab id: ");
         String LID = scanner.nextLine();
-        while (findLabByID(LID) == null) {
+        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(LID))
+            return;
+        Laboratory foundLab;
+        while ((foundLab = findLabByID(LID)) == null) {
             System.out.println("Error, selected lab id is not valid!\n" +
                     "Please enter selected lab id:");
             LID = scanner.nextLine();
+        }
+        if ((insuranceName != null) && !foundLab.supportInsurance(insuranceName)) {
+            System.out.println("Alert! The selected lab does not support your insurance," +
+                    " proceed anyway? [y/n]");
+            if (!scanner.nextLine().equals("y") &&
+                !scanner.nextLine().equals("Y")) {
+                return;
+            }
         }
         requestTestControl.submitLab(LID);
 
         System.out.println("Available time slots:");
         ArrayList<LocalDateTime> timeSlots = requestTestControl.selectTimeSlot();
+        if (timeSlots.size() == 0) {
+            System.out.println("Unfortunately there is no time slot available right now. " +
+                    "Please check later.");
+            return;
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         for (int i = 0; i < timeSlots.size(); i++) {
             System.out.println(i + ". " + timeSlots.get(i).format(formatter));
         }
         System.out.println("Please enter selected time slot index:");
-        int index = scanner.nextInt();
-        while (index >= timeSlots.size()) {
+        String index = scanner.nextLine();
+        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(index))
+            return;
+        while (Integer.parseInt(index) >= timeSlots.size()) {
             System.out.println("Error, selected time slot index is not valid!\n" +
                     "Please enter selected time slot index:");
-            index = scanner.nextInt();
+            index = scanner.nextLine();
+            if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(index))
+                return;
         }
-        requestTestControl.submitTimeSlot(timeSlots.get(index));
+        requestTestControl.submitTimeSlot(timeSlots.get(Integer.parseInt(index)));
 
         System.out.println("Please enter your address:");
         String address = scanner.nextLine();
+        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(address))
+            return;
         requestTestControl.sendAddress(address);
         requestTestControl.requestPayment();
         requestTestControl.allocatePhlebotomist();
