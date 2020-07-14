@@ -190,8 +190,9 @@ public class Main {
         if ((insuranceName != null) && !foundLab.supportInsurance(insuranceName)) {
             System.out.println("Alert! The selected lab does not support your insurance," +
                     " proceed anyway? [y/n]");
-            if (!scanner.nextLine().equals("y") &&
-                !scanner.nextLine().equals("Y")) {
+            String choice = scanner.nextLine();
+            if (!choice.equals("y") &&
+                !choice.equals("Y")) {
                 return;
             }
         }
