@@ -1,7 +1,7 @@
 public class InsuranceReply {
     private boolean status;
-    private double franchise;
-    public InsuranceReply(boolean _status, double _franchise) {
+    private float franchise;
+    public InsuranceReply(boolean _status, float _franchise) {
         status = _status;
         franchise = _franchise;
     }
@@ -11,6 +11,6 @@ public class InsuranceReply {
         return "status: " + (status ? "OK" : "ERROR");
     }
 
-    public double getFranchise() { return franchise; }
+    public float getFranchise() { return franchise; }
     public boolean getStatus() { return status; }
 }

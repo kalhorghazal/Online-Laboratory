@@ -78,4 +78,21 @@ public class TestRequest {
     public void setPhlebotomist(String phID) {
         sampling.setPhlebotomist(phID);
     }
+
+    public void makeInsurance(String insuranceName, String IID, float franchise) {
+        insurance = new Insurance(insuranceName, IID, franchise);
+    }
+
+    public float getTotalPrice() {
+        float franchise = 1;
+        if (insurance.isEnabled()) {
+            franchise = insurance.getFranchise();
+            applyFranchise(franchise);
+        }
+        return totalPrice;
+    }
+
+    public void applyFranchise(float franchise) {
+        totalPrice *= franchise;
+    }
 }

@@ -27,7 +27,7 @@ public class RequestTestControl {
         return supportingLabs;
     }
 
-//    sendFilter(filterParams: List params
+//    sendFilter(filterParams: List params)
 
     public void submitLab(String LID) {
         testRequest.setLab(LID);
@@ -43,7 +43,7 @@ public class RequestTestControl {
         if (isAddressOK) {
             testRequest.makePlace(address);
         } else {
-            System.out.println("Error, Address is not valid!");
+            System.out.println("Error, address is not valid!");
         }
     }
 
@@ -80,5 +80,24 @@ public class RequestTestControl {
         testRequest.makeAppointment(timeSlot);
     }
 
+    public void requestInsurance(String IID, String insuranceName) {
+        InsuranceReply insuranceReply = RequestInsuranceControl.getInstance().submitRequestToInsuranceAPI(insuranceName, IID);
+        if (!insuranceReply.getStatus()) {
+            System.out.println("Error, insurance is not valid!");
+            return;
+        }
+        System.out.println(insuranceReply);
+        testRequest.makeInsurance(insuranceName, IID, insuranceReply.getFranchise());
+    }
+
+    public void requestPayment() {
+        float totalPrice = testRequest.getTotalPrice();
+        System.out.println("Total price: " + totalPrice);
+        RequestPaymentControl.getInstance().submitPriceToOnlineBanking(totalPrice);
+        boolean wasPaymentOk = RequestPaymentControl.getInstance().redirectToToOnlineBanking();
+        if (!wasPaymentOk) {
+            System.out.println("Error, payment has not been proceeded");
+        }
+    }
 
 }
