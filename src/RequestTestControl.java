@@ -100,4 +100,7 @@ public class RequestTestControl {
         }
     }
 
+    public TestRequest getTestRequest() {
+        return testRequest;
+    }
 }

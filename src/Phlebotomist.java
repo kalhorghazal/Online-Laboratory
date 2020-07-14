@@ -2,10 +2,14 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 
-public class Phlebotomist {
+public class Phlebotomist extends User {
     private String phID;
+    private String firstName;
+    private String lastName;
     private ArrayList<LocalDateTime> submittedTimeSlots;
-    public Phlebotomist(String _phID) {
+    public Phlebotomist(String _phID, String _firstName, String _lastName,
+                        String _username, String _password) {
+        super(_firstName, _lastName, _username, _password);
         phID = _phID;
         submittedTimeSlots = new ArrayList<>();
     }
