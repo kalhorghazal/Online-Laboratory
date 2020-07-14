@@ -342,9 +342,9 @@
 													"font": "Arial;13;1",
 													"left": 413,
 													"top": 47,
-													"width": 142.20263671875,
+													"width": 142.9326171875,
 													"height": 13,
-													"text": "sendAddressControl"
+													"text": "ManageSendAddress"
 												},
 												{
 													"_type": "LabelView",
@@ -377,7 +377,7 @@
 											"font": "Arial;13;0",
 											"left": 408,
 											"top": 40,
-											"width": 152.20263671875,
+											"width": 152.9326171875,
 											"height": 40,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAFynvO05HFbyeA="
@@ -411,7 +411,7 @@
 									"font": "Arial;13;0",
 									"left": 408,
 									"top": 40,
-									"width": 152.20263671875,
+									"width": 152.9326171875,
 									"height": 353,
 									"nameCompartment": {
 										"$ref": "AAAAAAFynvO05HFauH4="
@@ -1578,7 +1578,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFynu0H6W+Sssk="
 							},
-							"name": "sendAddressControl",
+							"name": "ManageSendAddress",
 							"represent": {
 								"$ref": "AAAAAAFynvO05HFXNUM="
 							},
@@ -1715,7 +1715,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFynu0H6G+RSVc="
 					},
-					"name": "Role10"
+					"name": "Role10",
+					"type": ""
 				}
 			]
 		}
