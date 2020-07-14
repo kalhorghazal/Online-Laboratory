@@ -53,6 +53,9 @@ public class RequestTestControl {
             System.out.println("Error, no phlebotomist available for this date and time!");
         } else {
             testRequest.setPhlebotomist(phID);
+            Phlebotomist ph = Main.findPhlebotomistByID(phID);
+            if (ph != null)
+                ph.submitTimeSlot(testRequest.getDateTime());
         }
     }
 

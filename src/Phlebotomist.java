@@ -20,7 +20,7 @@ public class Phlebotomist {
         return true;
     }
 
-    public void setTimeSlot(LocalDateTime timeSlot) {
+    public void submitTimeSlot(LocalDateTime timeSlot) {
         submittedTimeSlots.add(timeSlot);
     }
 
