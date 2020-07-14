@@ -1,6 +1,4 @@
-import java.awt.image.BufferedImage;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class TestRequest {
@@ -9,17 +7,20 @@ public class TestRequest {
     private int age;
     private String NID;
     private ArrayList<String> diseases;
-    private Prescription prescription;
+    private String labID;
+    private float totalPrice;
     private ArrayList<Test> tests;
     private Appointment appointment;
     private Sampling sampling;
-    private Place place;
+    private Insurance insurance;
     public TestRequest(String _firstName, String _lastName, int _age, String _NID, ArrayList<String> _diseases) {
         firstName = _firstName;
         lastName = _lastName;
         age = _age;
         NID = _NID;
         diseases = _diseases;
+        totalPrice = 0;
+        tests = new ArrayList<>();
     }
 
     public ArrayList<Test> getTests() {
@@ -30,48 +31,51 @@ public class TestRequest {
         return firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getNID() {
-        return NID;
-    }
-
-    public ArrayList<String> getDiseases() {
-        return diseases;
-    }
-
-    public Prescription getPrescription() {
-        return prescription;
-    }
-
-    public String makePrescription(BufferedImage prescriptionImage) {
-        int currentID = Tracker.nextPreID;
-        prescription = new Prescription(Integer.toString(currentID), prescriptionImage);
-        Tracker.setNextPreID();
-        return Integer.toString(currentID);
-    }
-
     public void makeTest(String testName) {
-        Test test = new Test(testName);
-        tests.add(test);
+        float testPrice = getTestPrice(testName);
+        sampling.makeTest(testName, testPrice);
+        addToTotalPrice(testPrice);
     }
 
-    public void makeAppointment(LocalDate date, LocalTime time) {
-        appointment = new Appointment(date, time);
+    public void makeAppointment(LocalDateTime timeSlot) {
+        appointment = new Appointment(timeSlot);
     }
 
     public void makeSampling() {
-        // TODO: sampling!
         sampling = new Sampling();
     }
 
+    public void setLab(String LID) {
+        labID = LID;
+    }
+
+    public float getTestPrice(String testName) {
+        return Main.getTestPrices().get(testName);
+    }
+
+    public void addToTotalPrice(float price) {
+        totalPrice += price;
+    }
+
+    public String getInsuranceName() {
+        return insurance.getName();
+    }
+
+    public void enableInsurance() {
+        insurance.enable();
+    }
+
     public void makePlace(String address) {
-        place = new Place(address);
+        sampling.makePlace(address);
+    }
+
+    public String getLabID() { return labID; }
+
+    public LocalDateTime getDateTime() {
+        return appointment.getDateTime();
+    }
+
+    public void setPhlebotomist(String phID) {
+        sampling.setPhlebotomist(phID);
     }
 }

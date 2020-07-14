@@ -1,19 +1,12 @@
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Appointment {
-    private LocalDate date;
-    private LocalTime time;
-    public Appointment(LocalDate _date, LocalTime _time) {
-        date = _date;
-        time = _time;
+    private LocalDateTime dateTime;
+    public Appointment(LocalDateTime _dateTime) {
+        dateTime = _dateTime;
     }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public LocalTime getTime() {
-        return time;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 }
