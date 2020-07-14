@@ -58,6 +58,8 @@ public class TestRequest {
     }
 
     public String getInsuranceName() {
+        if (insurance == null)
+            return null;
         return insurance.getName();
     }
 
@@ -65,7 +67,7 @@ public class TestRequest {
         insurance.enable();
     }
 
-    public void makePlace(String address) {
+    public void submitAddress(String address) {
         sampling.makePlace(address);
     }
 
@@ -85,7 +87,7 @@ public class TestRequest {
 
     public float getTotalPrice() {
         float franchise = 1;
-        if (insurance.isEnabled()) {
+        if (insurance != null && insurance.isEnabled()) {
             franchise = insurance.getFranchise();
             applyFranchise(franchise);
         }

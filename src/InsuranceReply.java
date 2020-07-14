@@ -8,7 +8,7 @@ public class InsuranceReply {
 
     @Override
     public String toString() {
-        return "status: " + (status ? "OK" : "ERROR");
+        return "Insurance status: " + (status ? "OK" : "ERROR");
     }
 
     public float getFranchise() { return franchise; }

@@ -14,4 +14,11 @@ public class User {
         return password.equals(_password);
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }

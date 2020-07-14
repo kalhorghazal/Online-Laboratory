@@ -18,6 +18,9 @@ public class RequestTestControl {
 
     public ArrayList<Laboratory> selectLab() {
         String insuranceName = testRequest.getInsuranceName();
+        if (insuranceName == null) {
+            return Main.getLaboratories();
+        }
         ArrayList<Laboratory> supportingLabs = new ArrayList<>();
         for (Laboratory lab : Main.getLaboratories()) {
             if (lab.supportInsurance(insuranceName)) {
@@ -32,7 +35,7 @@ public class RequestTestControl {
     public void submitLab(String LID) {
         testRequest.setLab(LID);
         Laboratory selectedLab = Main.findLabByID(LID);
-        if ((selectedLab != null)
+        if ((testRequest.getInsuranceName() != null) && (selectedLab != null)
             && (selectedLab.supportInsurance(testRequest.getInsuranceName()))) {
                 testRequest.enableInsurance();
             }
@@ -41,7 +44,7 @@ public class RequestTestControl {
     public void sendAddress(String address) {
         boolean isAddressOK = ManageSendAddress.getInstance().submitAddressToGPS(address);
         if (isAddressOK) {
-            testRequest.makePlace(address);
+            testRequest.submitAddress(address);
         } else {
             System.out.println("Error, address is not valid!");
         }

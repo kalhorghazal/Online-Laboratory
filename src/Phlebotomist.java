@@ -31,4 +31,10 @@ public class Phlebotomist extends User {
     public String getPhID() {
         return phID;
     }
+
+    public void printTimeSlots() {
+        for (LocalDateTime localDateTime : submittedTimeSlots) {
+            System.out.println(localDateTime);
+        }
+    }
 }
