@@ -229,6 +229,7 @@ public class Main {
         requestTestControl.sendAddress(address);
         requestTestControl.requestPayment();
         requestTestControl.allocatePhlebotomist();
+        ((Patient) users.get(0)).addTestRequest(requestTestControl.getTestRequest());
     }
 
     public static void main(String[] args) {
