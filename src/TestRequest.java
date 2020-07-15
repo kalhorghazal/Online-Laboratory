@@ -9,7 +9,6 @@ public class TestRequest {
     private ArrayList<String> diseases;
     private String labID;
     private float totalPrice;
-    private ArrayList<Test> tests;
     private Appointment appointment;
     private Sampling sampling;
     private Insurance insurance;
@@ -20,15 +19,6 @@ public class TestRequest {
         NID = _NID;
         diseases = _diseases;
         totalPrice = 0;
-        tests = new ArrayList<>();
-    }
-
-    public ArrayList<Test> getTests() {
-        return tests;
-    }
-
-    public String getFirstName() {
-        return firstName;
     }
 
     public void makeTest(String testName) {
@@ -86,7 +76,7 @@ public class TestRequest {
     }
 
     public float getTotalPrice() {
-        float franchise = 1;
+        float franchise;
         if (insurance != null && insurance.isEnabled()) {
             franchise = insurance.getFranchise();
             applyFranchise(franchise);
