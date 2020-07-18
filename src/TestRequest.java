@@ -12,13 +12,17 @@ public class TestRequest {
     private Appointment appointment;
     private Sampling sampling;
     private Insurance insurance;
-    public TestRequest(String _firstName, String _lastName, int _age, String _NID, ArrayList<String> _diseases) {
+    private String ID;
+    public TestRequest(String _firstName, String _lastName,
+                       int _age, String _NID, ArrayList<String> _diseases,
+                       String _ID) {
         firstName = _firstName;
         lastName = _lastName;
         age = _age;
         NID = _NID;
         diseases = _diseases;
         totalPrice = 0;
+        ID = _ID;
     }
 
     public void makeTest(String testName) {
@@ -67,7 +71,7 @@ public class TestRequest {
         return appointment.getDateTime();
     }
 
-    public void setPhlebotomist(String phID) {
+    public void setSamplingPhlebotomist(String phID) {
         sampling.setPhlebotomist(phID);
     }
 
@@ -86,5 +90,9 @@ public class TestRequest {
 
     public void applyFranchise(float franchise) {
         totalPrice *= franchise;
+    }
+
+    public String getID() {
+        return ID;
     }
 }

@@ -5,8 +5,10 @@ public class RequestTestControl {
     private TestRequest testRequest;
     public RequestTestControl() {}
 
-    public void requestTest(String firstName, String lastName, int age, String NID, ArrayList<String> diseases) {
-        testRequest = new TestRequest(firstName, lastName, age, NID, diseases);
+    public void requestTest(String firstName, String lastName,
+                            int age, String NID, ArrayList<String> diseases,
+                            String testID) {
+        testRequest = new TestRequest(firstName, lastName, age, NID, diseases, testID);
     }
 
     public void sendTestList(ArrayList<String> testNames) {
@@ -30,8 +32,6 @@ public class RequestTestControl {
         return supportingLabs;
     }
 
-//    sendFilter(filterParams: List params)
-
     public void submitLab(String LID) {
         testRequest.setLab(LID);
         Laboratory selectedLab = Main.findLabByID(LID);
@@ -41,24 +41,26 @@ public class RequestTestControl {
             }
     }
 
-    public void sendAddress(String address) {
+    public boolean sendAddress(String address) {
         boolean isAddressOK = ManageSendAddress.getInstance().submitAddressToGPS(address);
         if (isAddressOK) {
             testRequest.submitAddress(address);
+            return true;
         } else {
-            System.out.println("Error, address is not valid!");
+            return false;
         }
     }
 
-    public void allocatePhlebotomist() {
+    public boolean allocatePhlebotomist() {
         String phID = selectPhlebotomist();
         if (phID == null) {
-            System.out.println("Error, no phlebotomist available for this date and time!");
+            return false;
         } else {
-            testRequest.setPhlebotomist(phID);
+            testRequest.setSamplingPhlebotomist(phID);
             Phlebotomist ph = Main.findPhlebotomistByID(phID);
             if (ph != null)
                 ph.submitTimeSlot(testRequest.getDateTime());
+            return true;
         }
     }
 
@@ -83,24 +85,23 @@ public class RequestTestControl {
         testRequest.makeAppointment(timeSlot);
     }
 
-    public void requestInsurance(String IID, String insuranceName) {
-        InsuranceReply insuranceReply = RequestInsuranceControl.getInstance().submitRequestToInsuranceAPI(insuranceName, IID);
+    public boolean requestInsurance(String IID, String insuranceName) {
+        InsuranceReply insuranceReply =
+                RequestInsuranceControl.getInstance().submitRequestToInsuranceAPI(insuranceName, IID);
         if (!insuranceReply.getStatus()) {
             System.out.println("Error, insurance is not valid!");
-            return;
+            return false;
         }
         System.out.println(insuranceReply);
         testRequest.makeInsurance(insuranceName, IID, insuranceReply.getFranchise());
+        return true;
     }
 
-    public void requestPayment() {
+    public boolean requestPayment() {
         float totalPrice = testRequest.getTotalPrice();
         System.out.println("Total price: " + totalPrice);
         RequestPaymentControl.getInstance().submitPriceToOnlineBanking(totalPrice);
-        boolean wasPaymentOk = RequestPaymentControl.getInstance().redirectToToOnlineBanking();
-        if (!wasPaymentOk) {
-            System.out.println("Error, payment has not been proceeded");
-        }
+        return RequestPaymentControl.getInstance().redirectToToOnlineBanking();
     }
 
     public TestRequest getTestRequest() {

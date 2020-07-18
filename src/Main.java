@@ -9,7 +9,8 @@ public class Main {
     private static ArrayList<Laboratory> laboratories;
     private static ArrayList<Phlebotomist> phlebotomists;
     private static HashMap<String, Float> testPrices;
-    private static ArrayList<User> users;
+    private static ArrayList<Patient> patients;
+    private static ArrayList<TestRequest> testRequests;
     public static ArrayList<Laboratory> getLaboratories() {
         return  laboratories;
     }
@@ -43,28 +44,27 @@ public class Main {
     private static void init() {
         phlebotomists = new ArrayList<>();
         laboratories = new ArrayList<>();
-        users = new ArrayList<>();
+        patients = new ArrayList<>();
         testPrices = new HashMap<>();
+        testRequests = new ArrayList<>();
 
         Patient patient = new Patient("Borna", "Bordbar",
                 "0022211918", 21, null, "bornabb", "2222");
-        users.add(patient);
+        patients.add(patient);
 
-        String phID1 = Integer.toString(Tracker.nextPhID);
+        String phID1 = Integer.toString(Tracker.getNextPhID());
         Tracker.setNextPhID();
         Phlebotomist newPh1 = new Phlebotomist(phID1, "Arman", "Armani",
                 "armanarmani", "1234");
         phlebotomists.add(newPh1);
-        users.add(newPh1);
 
-        String phID2 = Integer.toString(Tracker.nextPhID);
+        String phID2 = Integer.toString(Tracker.getNextPhID());
         Tracker.setNextPhID();
         Phlebotomist newPh2 = new Phlebotomist(phID2, "Mahsa", "Mahani",
                 "mahsamahani", "5678");
         phlebotomists.add(newPh2);
-        users.add(newPh2);
 
-        String LID1 = Integer.toString(Tracker.nextLID);
+        String LID1 = Integer.toString(Tracker.getNextLID());
         Tracker.setNextLID();
         String name1 = "Arya";
         String address1 = "32, Enghelab Sq., Tehran, Tehran";
@@ -81,7 +81,7 @@ public class Main {
         Laboratory newLab1 = new Laboratory(name1, address1, insurances1, LID1, timeSlots1);
         laboratories.add(newLab1);
 
-        String LID2 = Integer.toString(Tracker.nextLID);
+        String LID2 = Integer.toString(Tracker.getNextLID());
         Tracker.setNextLID();
         String name2 = "Takhasosi Fardis";
         String address2 = "35, 15th Street, Fardis, Alborz";
@@ -100,7 +100,7 @@ public class Main {
         Laboratory newLab2 = new Laboratory(name2, address2, insurances2, LID2, timeSlots2);
         laboratories.add(newLab2);
 
-        String LID3 = Integer.toString(Tracker.nextLID);
+        String LID3 = Integer.toString(Tracker.getNextLID());
         Tracker.setNextLID();
         String name3 = "Noor";
         String address3 = "93, Kargar Boulevard, Tehran, Tehran";
@@ -136,16 +136,55 @@ public class Main {
         return true;
     }
 
+    public static void addTestRequest(TestRequest testRequest) {
+        testRequests.add(testRequest);
+    }
+
+    public static boolean shouldQuit(String input) {
+        return Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(input);
+    }
+
+    public static String getLabChoice(Scanner scanner, String insuranceName) {
+        System.out.println("Please enter selected lab id: ");
+        String LID = scanner.nextLine();
+        if (shouldQuit(LID))
+            return null;
+        Laboratory foundLab;
+        while ((foundLab = findLabByID(LID)) == null) {
+            System.out.println("Error, selected lab id is not valid!\n" +
+                    "Please enter selected lab id:");
+            LID = scanner.nextLine();
+            if (shouldQuit(LID))
+                return null;
+        }
+        if ((insuranceName != null) && !foundLab.supportInsurance(insuranceName)) {
+            System.out.println("Alert! The selected lab does not support your insurance," +
+                    " proceed anyway? [y/n]");
+            String choice = scanner.nextLine();
+            if (shouldQuit(choice))
+                return null;
+            if (!choice.equals("y") &&
+                    !choice.equals("Y")) {
+                getLabChoice(scanner, insuranceName);
+            }
+        }
+        return LID;
+    }
+
     public static void requestTest() {
         RequestTestControl requestTestControl = new RequestTestControl();
         Scanner scanner = new Scanner(System.in);
 
-        Patient patient = (Patient) users.get(0);
+        Patient patient = patients.get(0);
+        String testID = Integer.toString(Tracker.getNextTestID());
+
         requestTestControl.requestTest(patient.getFirstName(), patient.getLastName(),
-                patient.getAge(), patient.getNID(), patient.getDiseases());
+                patient.getAge(), patient.getNID(), patient.getDiseases(), testID);
 
-        System.out.println("You can quit in any step by entering quit or q\n------------------");
-
+        System.out.println("You can quit in any step by entering quit or q\n" +
+                "-----------------------------------------\n" +
+                "Available tests:");
+        System.out.println(testPrices.keySet());
         System.out.println("Please enter test names separated by comma:");
         ArrayList<String> testNames = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
         while (testNames.size() == 0) {
@@ -162,40 +201,29 @@ public class Main {
 
         System.out.println("Please enter your insurance ID: (leave empty if none exists)");
         String insuranceID = scanner.nextLine();
-        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(insuranceID))
+        if (shouldQuit(insuranceID))
             return;
         String insuranceName = null;
+        boolean insuranceOK = false;
         if (!insuranceID.equals("")) {
             System.out.println("Please enter your insurance name:");
             insuranceName = scanner.nextLine();
-            if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(insuranceName))
+            if (shouldQuit(insuranceName))
                 return;
-            requestTestControl.requestInsurance(insuranceID, insuranceName);
+            insuranceOK = requestTestControl.requestInsurance(insuranceID, insuranceName);
         }
 
         ArrayList<Laboratory> labs = requestTestControl.selectLab();
+        if (insuranceOK && labs.size() == 0) {
+            System.out.println("Unfortunately no lab supports your insurance. All labs list:");
+            labs = laboratories;
+        }
         for (Laboratory lab : labs) {
             System.out.println(lab);
         }
-        System.out.println("Please enter selected lab id: ");
-        String LID = scanner.nextLine();
-        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(LID))
+        String LID = getLabChoice(scanner, insuranceName);
+        if (LID == null)
             return;
-        Laboratory foundLab;
-        while ((foundLab = findLabByID(LID)) == null) {
-            System.out.println("Error, selected lab id is not valid!\n" +
-                    "Please enter selected lab id:");
-            LID = scanner.nextLine();
-        }
-        if ((insuranceName != null) && !foundLab.supportInsurance(insuranceName)) {
-            System.out.println("Alert! The selected lab does not support your insurance," +
-                    " proceed anyway? [y/n]");
-            String choice = scanner.nextLine();
-            if (!choice.equals("y") &&
-                !choice.equals("Y")) {
-                return;
-            }
-        }
         requestTestControl.submitLab(LID);
 
         System.out.println("Available time slots:");
@@ -211,25 +239,48 @@ public class Main {
         }
         System.out.println("Please enter selected time slot index:");
         String index = scanner.nextLine();
-        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(index))
+        if (shouldQuit(index))
             return;
         while (Integer.parseInt(index) >= timeSlots.size()) {
             System.out.println("Error, selected time slot index is not valid!\n" +
                     "Please enter selected time slot index:");
             index = scanner.nextLine();
-            if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(index))
+            if (shouldQuit(index))
                 return;
         }
         requestTestControl.submitTimeSlot(timeSlots.get(Integer.parseInt(index)));
 
         System.out.println("Please enter your address:");
         String address = scanner.nextLine();
-        if (Arrays.asList(new String[]{"q", "quit", "Q", "Quit"}).contains(address))
+        if (shouldQuit(address))
             return;
-        requestTestControl.sendAddress(address);
-        requestTestControl.requestPayment();
-        requestTestControl.allocatePhlebotomist();
-        ((Patient) users.get(0)).addTestRequest(requestTestControl.getTestRequest());
+        boolean addressOK = requestTestControl.sendAddress(address);
+        while (!addressOK) {
+            System.out.println("Error, address is not valid!");
+            System.out.println("Please enter your address:");
+            address = scanner.nextLine();
+            if (shouldQuit(address))
+                return;
+            addressOK = requestTestControl.sendAddress(address);
+        }
+
+        boolean paymentOK = requestTestControl.requestPayment();
+        if (!paymentOK) {
+            System.out.println("Error, payment has not been proceeded!");
+            paymentOK = requestTestControl.requestPayment();
+        }
+
+        boolean phOK = requestTestControl.allocatePhlebotomist();
+        if (!phOK) {
+            System.out.println("Unfortunately there is no phlebotomist " +
+                    "available for this date and time. " +
+                    "Please check later.");
+            return;
+        }
+        System.out.println("Phlebotomist has been successfully allocated.\n" +
+                "Your request is submitted.");
+
+        patients.get(0).addTestRequest(requestTestControl.getTestRequest().getID());
     }
 
     public static void main(String[] args) {
