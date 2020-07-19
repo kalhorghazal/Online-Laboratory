@@ -31,9 +31,14 @@ public class Laboratory {
 
     @Override
     public String toString() {
-        String str = name + " Laboratory, ID: " + ID + "\n-----------------------------------------" +
+        String str = name + " Laboratory, ID: " + ID +
+                "\n-----------------------------------------" +
                 "\nSupported insurances: ";
         str += String.join(", ", supportedInsuranceList);
         return str + "\n";
+    }
+
+    public String getName() {
+        return name;
     }
 }

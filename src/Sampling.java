@@ -20,4 +20,8 @@ public class Sampling {
         Test newTest = new Test(testName, testPrice);
         tests.add(newTest);
     }
+
+    public String getPhID() {
+        return phID;
+    }
 }

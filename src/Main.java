@@ -1,9 +1,6 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     private static ArrayList<Laboratory> laboratories;
@@ -171,6 +168,27 @@ public class Main {
         return LID;
     }
 
+    public static void printTestRequest(TestRequest testRequest) {
+        String[] head = {"Firstname", "Lastname", "Insurance",
+                 "Lab", "Price", "Date", "Phlebotomist"
+        };
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        Phlebotomist phlebotomist = Objects.requireNonNull(findPhlebotomistByID(testRequest.getPhlebotomistID()));
+        String[] row = {testRequest.getFirstName(),
+                testRequest.getLastName(),
+                testRequest.getInsuranceName(),
+                Objects.requireNonNull(findLabByID(testRequest.getLabID())).getName(),
+                String.valueOf(testRequest.getTotalPrice()),
+                testRequest.getDateTime().format(formatter),
+                phlebotomist.getFirstName() + " " + phlebotomist.getLastName()
+        };
+        System.out.format("%-15s%-15s%-15s%-15s%-15s%-20s%-15s\n", head);
+        System.out.println("-------------------------------" +
+                "-------------------------------------------" +
+                "------------------------------------");
+        System.out.format("%-15s%-15s%-15s%-15s%-15s%-20s%-15s\n", row);
+    }
+
     public static void requestTest() {
         RequestTestControl requestTestControl = new RequestTestControl();
         Scanner scanner = new Scanner(System.in);
@@ -267,7 +285,7 @@ public class Main {
         boolean paymentOK = requestTestControl.requestPayment();
         if (!paymentOK) {
             System.out.println("Error, payment has not been proceeded!");
-            paymentOK = requestTestControl.requestPayment();
+            return;
         }
 
         boolean phOK = requestTestControl.allocatePhlebotomist();
@@ -281,6 +299,8 @@ public class Main {
                 "Your request is submitted.");
 
         patients.get(0).addTestRequest(requestTestControl.getTestRequest().getID());
+        addTestRequest(requestTestControl.getTestRequest());
+        printTestRequest(requestTestControl.getTestRequest());
     }
 
     public static void main(String[] args) {

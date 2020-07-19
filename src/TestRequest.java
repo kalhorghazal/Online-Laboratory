@@ -95,4 +95,16 @@ public class TestRequest {
     public String getID() {
         return ID;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPhlebotomistID() {
+        return sampling.getPhID();
+    }
 }
