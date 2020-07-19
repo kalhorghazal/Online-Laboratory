@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class Phlebotomist extends User {
     private String phID;
-    private String firstName;
-    private String lastName;
     private ArrayList<LocalDateTime> submittedTimeSlots;
     public Phlebotomist(String _phID, String _firstName, String _lastName,
                         String _username, String _password) {

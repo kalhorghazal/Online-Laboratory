@@ -15,8 +15,8 @@ public class Patient extends User {
         testRequests = new ArrayList<>();
     }
 
-    public void addTestRequest(String testRequest) {
-        testRequests.add(testRequest);
+    public void addTestRequest(String testRequestID) {
+        testRequests.add(testRequestID);
     }
 
     public String getNID() {
