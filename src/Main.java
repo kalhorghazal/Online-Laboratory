@@ -277,6 +277,8 @@ public class Main {
         }
 
         int index = getTimeSlotChoice(scanner, timeSlots.size());
+        if (index == -1)
+            return;
         requestTestControl.submitTimeSlot(timeSlots.get(index));
 
         System.out.println("Please enter your address:");
