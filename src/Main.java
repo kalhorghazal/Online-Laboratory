@@ -162,10 +162,30 @@ public class Main {
                 return null;
             if (!choice.equals("y") &&
                     !choice.equals("Y")) {
-                getLabChoice(scanner, insuranceName);
+                return getLabChoice(scanner, insuranceName);
             }
         }
         return LID;
+    }
+
+    public static int getTimeSlotChoice(Scanner scanner, int size) {
+        System.out.println("Please enter selected time slot index:");
+        String index = scanner.nextLine();
+        if (shouldQuit(index))
+            return -1;
+        try {
+            while (Integer.parseInt(index) >= size) {
+                System.out.println("Error, selected time slot index is not valid!\n" +
+                        "Please enter selected time slot index:");
+                index = scanner.nextLine();
+                if (shouldQuit(index))
+                    return -1;
+            }
+        } catch (NumberFormatException ex) {
+            System.out.println("Error, selected time slot index is not valid!");
+            return getTimeSlotChoice(scanner, size);
+        }
+        return Integer.parseInt(index);
     }
 
     public static void printTestRequest(TestRequest testRequest) {
@@ -255,18 +275,9 @@ public class Main {
         for (int i = 0; i < timeSlots.size(); i++) {
             System.out.println(i + ". " + timeSlots.get(i).format(formatter));
         }
-        System.out.println("Please enter selected time slot index:");
-        String index = scanner.nextLine();
-        if (shouldQuit(index))
-            return;
-        while (Integer.parseInt(index) >= timeSlots.size()) {
-            System.out.println("Error, selected time slot index is not valid!\n" +
-                    "Please enter selected time slot index:");
-            index = scanner.nextLine();
-            if (shouldQuit(index))
-                return;
-        }
-        requestTestControl.submitTimeSlot(timeSlots.get(Integer.parseInt(index)));
+
+        int index = getTimeSlotChoice(scanner, timeSlots.size());
+        requestTestControl.submitTimeSlot(timeSlots.get(index));
 
         System.out.println("Please enter your address:");
         String address = scanner.nextLine();
