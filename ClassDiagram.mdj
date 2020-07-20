@@ -1012,6 +1012,24 @@
 											"height": 13,
 											"text": "-image: Image",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFzbjQLijdlNzs=",
+											"_parent": {
+												"$ref": "AAAAAAFyttbYmyrXzO0="
+											},
+											"model": {
+												"$ref": "AAAAAAFzbjQLIjdizA4="
+											},
+											"fillColor": "#d1ffa3",
+											"font": "Arial;13;0",
+											"left": 805,
+											"top": 132,
+											"width": 86.353515625,
+											"height": 13,
+											"text": "-status: String",
+											"horizontalAlignment": 0
 										}
 									],
 									"fillColor": "#d1ffa3",
@@ -1019,7 +1037,7 @@
 									"left": 800,
 									"top": 97,
 									"width": 96.353515625,
-									"height": 38
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1033,7 +1051,7 @@
 									"fillColor": "#d1ffa3",
 									"font": "Arial;13;0",
 									"left": 800,
-									"top": 135,
+									"top": 150,
 									"width": 96.353515625,
 									"height": 10
 								},
@@ -1078,7 +1096,7 @@
 							"left": 800,
 							"top": 72,
 							"width": 96.353515625,
-							"height": 73,
+							"height": 88,
 							"nameCompartment": {
 								"$ref": "AAAAAAFyttbYmyrSj6M="
 							},
@@ -1117,7 +1135,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 827,
-									"top": 169,
+									"top": 176,
 									"width": 14.82177734375,
 									"height": 13,
 									"alpha": 0.22679893162824682,
@@ -1140,7 +1158,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 816,
-									"top": 221,
+									"top": 228,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -1161,7 +1179,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 860,
-									"top": 222,
+									"top": 229,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -1223,7 +1241,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 856,
+									"left": 857,
 									"top": 204,
 									"width": 7.22998046875,
 									"height": 13,
@@ -1247,7 +1265,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 831,
-									"top": 164,
+									"top": 179,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -1267,7 +1285,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 818,
-									"top": 167,
+									"top": 182,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -1286,7 +1304,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 856,
-									"top": 160,
+									"top": 175,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1337,7 +1355,7 @@
 								"$ref": "AAAAAAFzLiqj+cz2ccE="
 							},
 							"lineStyle": 1,
-							"points": "846:311;847:145",
+							"points": "846:311;847:160",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFzLhm85ERivQs="
@@ -2198,7 +2216,7 @@
 											"top": 447,
 											"width": 404.27587890625,
 											"height": 13,
-											"text": "+ID: String",
+											"text": "-ID: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -9054,7 +9072,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFzN5MIcZgmNEg="
 									},
-									"name": "String Address"
+									"name": "String Address",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -9838,6 +9857,16 @@
 							"name": "image",
 							"visibility": "private",
 							"type": "Image"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFzbjQLIjdizA4=",
+							"_parent": {
+								"$ref": "AAAAAAFyttbYmSrPMBk="
+							},
+							"name": "status",
+							"visibility": "private",
+							"type": "String"
 						}
 					]
 				},
@@ -11104,6 +11133,7 @@
 								"$ref": "AAAAAAFzLiqj+cz0F54="
 							},
 							"name": "ID",
+							"visibility": "private",
 							"type": "String"
 						}
 					],
@@ -13181,7 +13211,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFzZvF11eWp4XE="
 									},
-									"name": "String testRequestID"
+									"name": "String testRequestID",
+									"type": ""
 								}
 							]
 						}
